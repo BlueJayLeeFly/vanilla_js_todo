@@ -8,9 +8,46 @@ html {
 	font-family: 'Inter', sans-serif;
 }
 
+body {
+	line-height: 1.3;
+	font-size: 1em;
+	font-family: 'inter', sans-serif;
+	background: linear-gradient(
+		109.6deg,
+		rgba(37, 117, 252, 1) 11.2%,
+		rgba(144, 6, 161, 1) 53.7%,
+		rgba(0, 212, 255, 1) 100.2%
+	);
+	background-size: 300% 300%;
+	animation: background-gradient 15s ease infinite;
+}
+
+@keyframes background-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 ul {
 	padding-left: 0;
 	list-style-type: none;
+}
+
+a {
+	display: inline-block;
+	margin: 1em auto;
+	text-decoration: none;
+	font-size: 1.2em;
+	color: white;
+	padding: 10px 25px;
+	background-color: rgb(16, 219, 219);
+	border-radius: 9px;
 }
 
 button {
@@ -28,10 +65,35 @@ button i:hover {
 	color: purple;
 }
 
+.landing-container {
+	height: 90vh;
+	text-align: center;
+	color: white;
+}
+
+.landing-container h1 {
+	font-size: 4.6em;
+	margin-bottom: 0;
+}
+
+.landing-container h2 {
+	font-weight: 400;
+}
+
+.landing-container img {
+	display: block;
+	margin: 10px auto;
+	max-width: 750px;
+}
+
 @media screen and (max-width: 800px) {
 	.todo-list-container {
 		flex-direction: column;
 		min-height: 200px;
+	}
+
+	.landing-container h1 {
+		font-size: 4em;
 	}
 }
 
